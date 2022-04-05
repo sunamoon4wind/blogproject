@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+
+<form action="" method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="更新する">
+    <a href="{% url 'detail' object.pk %}" class="btn btn-primary">保存せず戻る</a>
+</form>
+
+{% endblock content %}
